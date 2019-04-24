@@ -13,12 +13,16 @@
   <div id="app">
     <el-table :data="showRecentBlocks" style="width: 100%">
       <el-table-column prop="height" label="高度">
+        <template slot-scope="scope">
+          <!-- <el-button type="primary" @click="handleclick(scope)">{{scope.row.height}}</el-button> -->
+           <a href="'https://www.baidu.com/'+scope.row.height">{{scope.row.height}}</a>
+        </template>
       </el-table-column>
       <el-table-column prop="showtime" label="时间">
       </el-table-column>
       <el-table-column prop="txSize" label="交易数量">
       </el-table-column>
-      <el-table-column prop="sizeOnDisk" label="大小">
+      <el-table-column prop="showSizeOnDisk" label="大小">
       </el-table-column>
     </el-table>
   </div>

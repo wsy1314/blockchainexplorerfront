@@ -7,7 +7,8 @@ var app = new Vue({
      showRecentBlocks(){
        var now = Date.now();
        this.recentBlocks.forEach(block => {
-          block.showtime = (now - block.time)/1000/60/60;
+          block.showtime = parseInt((now - block.time)/1000/60);
+          block.showSizeOnDisk = block.sizeOnDisk.toLocaleString("en");
        });
        return this.recentBlocks;
      }
@@ -28,6 +29,9 @@ var app = new Vue({
           // handle error
           console.log(error);
         });
+    },
+    handleclick(val){
+      console.log(val)
     }
   }
 
