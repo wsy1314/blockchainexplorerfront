@@ -7,7 +7,7 @@ var app = new Vue({
      showRecentBlocks(){
        var now = Date.now();
        this.recentBlocks.forEach(block => {
-          block.showtime = now - block.time;
+          block.showtime = (now - block.time)/1000/60/60;
        });
        return this.recentBlocks;
      }
