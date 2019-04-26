@@ -10,15 +10,18 @@
 </head>
 
 <body>
-  <div id="app" style="width:900px;height:600px;margin:100px auto" >
+  <div id="app" style="width:900px;height:600px;margin:100px auto">
     <el-input v-model="input" placeholder="Search" style="width:500px;height:30px;margin-left: 100px"></el-input>
-    <el-button type="primary" >Search</el-button><br><br><br><br><br>
-    <el-button plain>BLOCK</el-button><el-button plain>TRANSATIONS</el-button>
+    <el-button type="primary">Search</el-button><br><br><br><br><br>
+    <el-button plain>BLOCK</el-button>
+    <el-button plain>TRANSATIONS</el-button>
     <el-table :data="showRecentBlocks" style="width: 100%">s
       <el-table-column prop="height" label="高度">
         <template slot-scope="scope">
           <!-- <el-button type="primary" @click="handleclick(scope)">{{scope.row.height}}</el-button> -->
-           <a href="'https://www.baidu.com/'+ scope.row.height">{{scope.row.height}}</a>
+          <a :href="'BlockList.html?blockheight=' + scope.row.height" style="text-decoration:none">
+            <font style="color:blue">{{scope.row.height}}</font>
+          </a>
         </template>
       </el-table-column>
       <el-table-column prop="showtime" label="时间">
