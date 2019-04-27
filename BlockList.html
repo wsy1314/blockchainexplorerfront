@@ -12,31 +12,33 @@
     <h1>Block #{{blocklist.height}}</h1>
     <table style="font-size: 17px;color:lightslategrey;width:900px;">
         <tr style="height:50px">
-            <td  bgcolor="black" style="padding-left: 10px">blockhash</td>
+            <td style="padding-left: 10px">blockhash</td>
             <td style="padding-left:40px;color: black">{{blocklist.blockhash}}</td>
         </tr>
         <tr style="height:50px">
-            <td bgcolor="black" style="padding-left:10px">height</td>
-            <td style="padding-left:40px;color: black">{{blocklist.height}}</td>
+            <td style="padding-left:10px">height</td>
+            <td style="padding-left:40px;color: black">
+                <el-button type="text" style="font-size:18px" @click="handlebyheight">{{blocklist.height}}</el-button>
+            </td>
         </tr>
         <tr style="height:50px">
-            <td bgcolor="black" style="padding-left:10px">time</td>
+            <td style="padding-left:10px">time</td>
             <td style="padding-left:40px;color: black">{{blocklist.time}}</td>
         </tr>
         <tr style="height:50px">
-            <td bgcolor="black" style="padding-left:10px">txSize</td>
+            <td style="padding-left:10px">txSize</td>
             <td style="padding-left:40px;color: black">{{blocklist.txSize}}</td>
         </tr>
         <tr style="height:50px">
-            <td bgcolor="black"  style="padding-left:10px">difficulty</td>
+            <td style="padding-left:10px">difficulty</td>
             <td style="padding-left:40px;color: black">{{blocklist.difficulty}}</td>
         </tr>
         <tr style="height:50px">
-            <td bgcolor="orange"  style="padding-left:10px">prevBlockhash</td>
+            <td style="padding-left:10px">prevBlockhash</td>
             <td style="padding-left:40px"><el-button type="text" style="font-size:18px;color: chartreuse" @click="handprevBlockhash">{{blocklist.prevBlockhash}}</el-button></td>
         </tr>
         <tr style="height:50px">
-            <td bgcolor="orange"  style="padding-left:10px">nextBlockhash</td>
+            <td style="padding-left:10px">nextBlockhash</td>
             <td style="padding-left:40px"><el-button type="text" style="font-size:18px;color: chartreuse" @click="handnextBlockhash">{{blocklist.nextBlockhash}}</el-button></td>
         </tr>
         <tr style="height:50px">
