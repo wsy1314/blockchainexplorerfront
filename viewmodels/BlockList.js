@@ -63,5 +63,9 @@ var app = new Vue({
     handlebyheight() {
       location.href = "TransactionDetailAddressList?blockheight=" + this.blockheight;
     },
+    // 跳转到该地址信息列表
+    handbyaddress(address){
+      location.href="TransactionAddressList?address="+address;
+ }
   }
 })

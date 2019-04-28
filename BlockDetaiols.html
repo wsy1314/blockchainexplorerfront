@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/elementui.css">
+    <title>Demo</title>
+</head>
+<body>
+  <div id="app" style="margin: 50px auto;width:900px">
+    <font style="font-size:30px;font-weight: 800">Block Height {{blocklist.height}}</font>
+    <font style="font-size:20px;font-weight: 500">Blocks at depth 573250 in the bitcoin blockchain</font><br><br>
+    <table style="font-size: 20px;color:darkmagenta;width:1000px;font-weight: 700px">
+        <tr bgcolor="moccasin" style="height:60px">
+            <td style="padding-left:10px">blockhash</td>
+            <td style="padding-left:40px">
+                <el-button type="text" style="font-size:18px" @click="handblockhash">{{blocklist.blockhash}}
+                </el-button>
+            </td>
+        </tr>
+        <tr style="height:60px">
+            <td style="padding-left:10px">prevBlockhash</td>
+            <td style="padding-left:40px">
+                <el-button type="text" style="font-size:18px" @click="handprevBlockhash">{{blocklist.prevBlockhash}}
+                </el-button>
+            </td>
+        </tr>
+        <tr bgcolor="moccasin" style="height:60px">
+            <td style="padding-left:10px">nextBlockhash</td>
+            <td style="padding-left:40px">
+                <el-button type="text" style="font-size:18px" @click="handnextBlockhash">{{blocklist.nextBlockhash}}
+                </el-button>
+            </td>
+        </tr>
+        <tr style="height:60px">
+            <td style="padding-left:10px">height</td>
+            <td style="padding-left:40px">{{blocklist.height}}</td>
+        </tr>
+        <tr bgcolor="moccasin" style="height:60px">
+            <td style="padding-left:10px">time</td>
+            <td style="padding-left:40px">{{blocklist.time}}</td>
+        </tr>
+        <tr style="height:60px">
+            <td style="padding-left:10px">txSize</td>
+            <td style="padding-left:40px">{{blocklist.txSize}}</td>
+        </tr>
+        <tr bgcolor="moccasin" style="height:60px">
+            <td style="padding-left:10px">difficulty</td>
+            <td style="padding-left:40px">{{blocklist.difficulty}}</td>
+        </tr>
+        <tr style="height:60px">
+            <td style="padding-left:10px">merkleRoot</td>
+            <td style="padding-left:40px">{{blocklist.merkleRoot}}</td>
+        </tr>
+        <tr bgcolor="moccasin" style="height:60px">
+            <td style="padding-left:10px">sizeOnDisk</td>
+            <td style="padding-left:40px">{{blocklist.sizeOnDisk}}</td>
+        </tr>
+    </table>
+</div>
+      <script src="assets/js/axios.min.js"></script>
+      <script src="assets/js/vue.js"></script>
+      <script src="assets/js/elementui.js"></script>
+      <script src="viewmodels/demo.js"></script>
+    </body>
+</html>
